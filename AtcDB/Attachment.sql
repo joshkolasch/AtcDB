@@ -1,0 +1,7 @@
+﻿CREATE TABLE [dbo].[Attachment]
+(
+	[ID] INT NOT NULL PRIMARY KEY,
+	[ProductID] INT NOT NULL,
+	[FileName] NVARCHAR(255) NOT NULL,
+	[FilePath] NVARCHAR(255) NOT NULL
+)
