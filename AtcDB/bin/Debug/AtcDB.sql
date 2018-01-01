@@ -15,8 +15,8 @@ SET NUMERIC_ROUNDABORT OFF;
 GO
 :setvar DatabaseName "AtcDB"
 :setvar DefaultFilePrefix "AtcDB"
-:setvar DefaultDataPath "C:\Users\Venom\AppData\Local\Microsoft\VisualStudio\SSDT\AtcDB"
-:setvar DefaultLogPath "C:\Users\Venom\AppData\Local\Microsoft\VisualStudio\SSDT\AtcDB"
+:setvar DefaultDataPath "C:\Users\Iroh\AppData\Local\Microsoft\VisualStudio\SSDT\AtcDB"
+:setvar DefaultLogPath "C:\Users\Iroh\AppData\Local\Microsoft\VisualStudio\SSDT\AtcDB"
 
 GO
 :on error exit
@@ -37,20 +37,6 @@ IF N'$(__IsSqlCmdEnabled)' NOT LIKE N'True'
 
 GO
 USE [$(DatabaseName)];
-
-
-GO
-PRINT N'Creating [dbo].[ISContact]...';
-
-
-GO
-CREATE TABLE [dbo].[ISContact] (
-    [ID]          INT            NOT NULL,
-    [Name]        NVARCHAR (100) NOT NULL,
-    [PhoneNumber] NVARCHAR (20)  NULL,
-    [Email]       NVARCHAR (100) NULL,
-    PRIMARY KEY CLUSTERED ([ID] ASC)
-);
 
 
 GO
